@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Arang Kayu Keras - PT Gadis Desa Sae</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: url('front-view-barbecue-outdoors.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            border-bottom: 2px solid #F59E0B; 
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .lang-toggle button {
+            transition: background-color 0.3s ease;
+        }
+        .lang-toggle button.active {
+            background-color: #F59E0B;
+            color: white;
+        }
+        .fade-in {
+            animation: fadeInAnimation 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInAnimation {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+        .fade-in-delay-5 { animation-delay: 1s; }
+        .fade-in-delay-6 { animation-delay: 1.2s; }
+
+        .card img {
+            max-height: 200px; 
+            object-fit: cover; 
+            width: 100%;
+        }
+        .packaging-img {
+            width: 128px; 
+            height: 128px; 
+            object-fit: cover;
+            border-radius: 9999px; 
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1rem; 
+            border-width: 4px;
+            border-color: #F59E0B; 
+        }
+        .company-logo {
+            height: 50px; /* Sesuaikan tinggi logo */
+            width: auto; /* Lebar akan menyesuaikan secara otomatis */
+            margin-right: 0.75rem; /* Memberi jarak antara logo dan nama perusahaan */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="Untitled design_20250301_083814_0000.jpg" alt="Logo PT Gadis Desa Sae" class="company-logo">
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-700">PT Gadis Desa Sae</h1>
+            </div>
+            <nav class="hidden sm:flex space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-yellow-600">Tentang Produk</a>
+                <a href="#specifications" class="text-gray-600 hover:text-yellow-600">Spesifikasi</a>
+                <a href="#contact" class="text-gray-600 hover:text-yellow-600">Kontak</a>
+            </nav>
+            <div class="flex items-center">
+                <div class="lang-toggle space-x-1">
+                    <button id="lang-id" class="px-3 py-1 text-sm rounded-md border border-gray-300 hover:bg-gray-200 active">ID</button>
+                    <button id="lang-en" class="px-3 py-1 text-sm rounded-md border border-gray-300 hover:bg-gray-200">EN</button>
+                </div>
+                <button id="mobile-menu-button" class="sm:hidden ml-4 p-2 rounded-md text-gray-600 hover:text-yellow-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
+                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="sm:hidden hidden bg-white shadow-md">
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:text-yellow-600 hover:bg-gray-50">Tentang Produk</a>
+            <a href="#specifications" class="block px-6 py-3 text-gray-600 hover:text-yellow-600 hover:bg-gray-50">Spesifikasi</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:text-yellow-600 hover:bg-gray-50">Kontak</a>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center bg-black bg-opacity-60 p-8 rounded-lg"> 
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 fade-in" id="hero-title">Katalog Produk Arang Kayu Keras</h2>
+            <p class="text-lg md:text-xl mb-8 fade-in fade-in-delay-1" id="hero-subtitle">Kualitas Terbaik untuk Kebutuhan Anda</p>
+            <a href="#about" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 fade-in fade-in-delay-2">
+                Lihat Produk
+            </a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="about" class="py-10 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 section-title inline-block fade-in" id="about-title">Tentang Produk</h2>
+            <p class="text-gray-700 leading-relaxed mb-6 fade-in fade-in-delay-1" id="about-content">
+                Arang kayu keras dari PT Gadis Desa Sae adalah produk berkualitas tinggi yang dibuat dari campuran kayu keras terbaik, seperti kayu kopi, kayu mahoni, kayu cengkeh, dan jenis kayu keras lainnya. Proses produksi kami dilakukan dengan standar yang memastikan arang memiliki karakteristik unggul, seperti daya bakar tinggi, tahan lama, dan ramah lingkungan.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-2">
+                    <img src="backyard-outdoor-fireplace-full-burning-embers.jpg" alt="[Gambar Bara Api Menyala]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-600" id="advantage-1-title">Daya Bakar Tinggi</h3>
+                    <p class="text-gray-600" id="advantage-1-desc">Menghasilkan panas optimal untuk berbagai kebutuhan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-3">
+                    <img src="still-life-wish-charcoal.jpg" alt="[Gambar Tumpukan Arang Kayu]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-600" id="advantage-2-title">Tahan Lama</h3>
+                    <p class="text-gray-600" id="advantage-2-desc">Tidak cepat habis terbakar, cocok untuk penggunaan industri maupun rumah tangga.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-4">
+                    <img src="IMG_20250107_102706.jpg" alt="[Gambar Kayu Bahan Baku Arang]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-600" id="advantage-3-title">Ramah Lingkungan</h3>
+                    <p class="text-gray-600" id="advantage-3-desc">Dibuat dari bahan alami tanpa tambahan bahan kimia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="specifications" class="py-10 bg-gray-50 rounded-lg scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8 section-title inline-block fade-in" id="specs-title">Spesifikasi Produk</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center"> 
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in fade-in-delay-1">
+                        <ul class="space-y-3 text-gray-700">
+                            <li id="spec-raw-material"><strong>Bahan Baku:</strong> Kayu kopi, kayu mahoni, kayu cengkeh, dan kayu keras lainnya.</li>
+                            <li id="spec-carbon"><strong>Kadar Karbon:</strong> Minimal 75%</li>
+                            <li id="spec-moisture"><strong>Kadar Air:</strong> Maksimal 5%</li>
+                            <li id="spec-size"><strong>Ukuran:</strong> Beragam (sesuai permintaan)</li>
+                            <li id="spec-ash"><strong>Kandungan Abu:</strong> Maksimal 3%</li>
+                        </ul>
+                    </div>
+                    <div class="fade-in fade-in-delay-2">
+                        <img src="black-background-with-charcoal.jpg" alt="[Gambar Detail Arang Kayu Keras]" class="rounded-lg shadow-lg w-full h-auto max-h-80 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="py-10 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title inline-block fade-in" id="applications-title">Penggunaan</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-1">
+                    <img src="barbecue-grill-close-up-professionally-cooking-food-open-fire-cast-iron-grate.jpg" alt="[Gambar Panggangan Barbekyu]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600" id="app-1-title">Rumah Tangga</h3>
+                    <p class="text-gray-600" id="app-1-desc">Ideal untuk kebutuhan memasak seperti barbeque.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-2">
+                    <img src="IMG_20250107_102741.jpg" alt="[Gambar Tungku Pembakaran Arang]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-green-600" id="app-2-title">Industri</h3>
+                    <p class="text-gray-600" id="app-2-desc">Cocok untuk pembakaran di pabrik atau keperluan lain yang membutuhkan arang berkualitas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card fade-in fade-in-delay-3">
+                     <img src="IMG_20250107_095458.jpg" alt="[Gambar Arang dalam Kemasan Karung Siap Ekspor]" class="w-full h-48 object-cover rounded-md mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600" id="app-3-title">Ekspor</h3>
+                    <p class="text-gray-600" id="app-3-desc">Standar kualitas internasional untuk memenuhi permintaan pasar global.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packaging" class="py-10 bg-gray-50 rounded-lg scroll-mt-20">
+             <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8 section-title inline-block fade-in" id="packaging-title">Kemasan</h2>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md card fade-in fade-in-delay-1">
+                        <img src="IMG_20250107_095458.jpg" alt="[Gambar Kemasan Arang 10 kg]" class="packaging-img">
+                        <h3 class="text-xl font-semibold mb-2" id="pack-1-title">Kantong 10 kg</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card fade-in fade-in-delay-2">
+                        <img src="IMG_20250107_095458.jpg" alt="[Gambar Kemasan Arang 25 kg]" class="packaging-img">
+                        <h3 class="text-xl font-semibold mb-2" id="pack-2-title">Karung 25 kg</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card fade-in fade-in-delay-3">
+                        <img src="still-life-ashes-with-charcoal.jpg" alt="[Gambar Contoh Kemasan Kustom]" class="packaging-img">
+                        <h3 class="text-xl font-semibold mb-2" id="pack-3-title">Kemasan Khusus</h3>
+                        <p class="text-gray-600" id="pack-3-desc">(Sesuai permintaan pelanggan)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-gray-800 text-white scroll-mt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8 section-title inline-block border-yellow-500 fade-in" id="contact-title">Hubungi Kami</h2>
+                <div class="max-w-lg mx-auto bg-white text-gray-800 p-8 rounded-lg shadow-xl fade-in fade-in-delay-1">
+                    <p class="text-xl font-semibold mb-2">PT Gadis Desa Sae</p>
+                    <p class="mb-2" id="contact-email"><strong>Email:</strong> gadisdesasae@gmail.com</p>
+                    <p class="mb-2" id="contact-phone"><strong>Telepon/WhatsApp:</strong> +6285854492790</p>
+                    <p class="mb-4" id="contact-address-label"><strong>Alamat:</strong> <span id="contact-address">[Sertakan alamat perusahaan]</span></p>
+                    <a href="https://wa.me/6285854492790?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20arang%20Anda." target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Hubungi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <p>&copy; <span id="currentYear"></span> PT Gadis Desa Sae. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Script untuk tahun footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script untuk toggle bahasa
+        const content = {
+            id: {
+                heroTitle: "Katalog Produk Arang Kayu Keras",
+                heroSubtitle: "Kualitas Terbaik untuk Kebutuhan Anda",
+                heroButton: "Lihat Produk",
+                aboutTitle: "Tentang Produk",
+                aboutContent: "Arang kayu keras dari PT Gadis Desa Sae adalah produk berkualitas tinggi yang dibuat dari campuran kayu keras terbaik, seperti kayu kopi, kayu mahoni, kayu cengkeh, dan jenis kayu keras lainnya. Proses produksi kami dilakukan dengan standar yang memastikan arang memiliki karakteristik unggul, seperti daya bakar tinggi, tahan lama, dan ramah lingkungan.",
+                advantage1Title: "Daya Bakar Tinggi",
+                advantage1Desc: "Menghasilkan panas optimal untuk berbagai kebutuhan.",
+                advantage2Title: "Tahan Lama",
+                advantage2Desc: "Tidak cepat habis terbakar, cocok untuk penggunaan industri maupun rumah tangga.",
+                advantage3Title: "Ramah Lingkungan",
+                advantage3Desc: "Dibuat dari bahan alami tanpa tambahan bahan kimia.",
+                specsTitle: "Spesifikasi Produk",
+                specRawMaterial: "<strong>Bahan Baku:</strong> Kayu kopi, kayu mahoni, kayu cengkeh, dan kayu keras lainnya.",
+                specCarbon: "<strong>Kadar Karbon:</strong> Minimal 75%",
+                specMoisture: "<strong>Kadar Air:</strong> Maksimal 5%",
+                specSize: "<strong>Ukuran:</strong> Beragam (sesuai permintaan)",
+                specAsh: "<strong>Kandungan Abu:</strong> Maksimal 3%",
+                applicationsTitle: "Penggunaan",
+                app1Title: "Rumah Tangga",
+                app1Desc: "Ideal untuk kebutuhan memasak seperti barbeque.",
+                app2Title: "Industri",
+                app2Desc: "Cocok untuk pembakaran di pabrik atau keperluan lain yang membutuhkan arang berkualitas.",
+                app3Title: "Ekspor",
+                app3Desc: "Standar kualitas internasional untuk memenuhi permintaan pasar global.",
+                packagingTitle: "Kemasan",
+                pack1Title: "Kantong 10 kg",
+                pack2Title: "Karung 25 kg",
+                pack3Title: "Kemasan Khusus",
+                pack3Desc: "(Sesuai permintaan pelanggan)",
+                contactTitle: "Hubungi Kami",
+                contactEmail: "<strong>Email:</strong> gadisdesasae@gmail.com",
+                contactPhone: "<strong>Telepon/WhatsApp:</strong> +6285854492790",
+                contactAddressLabel: "<strong>Alamat:</strong> ",
+                contactAddress: "[Sertakan alamat perusahaan]",
+                navAbout: "Tentang Produk",
+                navSpecs: "Spesifikasi",
+                navContact: "Kontak",
+            },
+            en: {
+                heroTitle: "Hardwood Charcoal Product Catalog",
+                heroSubtitle: "Top Quality for Your Needs",
+                heroButton: "View Products",
+                aboutTitle: "About the Product",
+                aboutContent: "Hardwood charcoal from PT Gadis Desa Sae is a high-quality product made from a blend of premium hardwoods, including coffee wood, mahogany, clove wood, and other hardwood types. Our production process follows strict standards to ensure the charcoal delivers superior characteristics such as high heat output, long-lasting burn, and eco-friendliness.",
+                advantage1Title: "High Heat Output",
+                advantage1Desc: "Provides optimal heat for various needs.",
+                advantage2Title: "Long-Lasting Burn",
+                advantage2Desc: "Ensures prolonged usage, suitable for industrial or household purposes.",
+                advantage3Title: "Eco-Friendly",
+                advantage3Desc: "Made from natural materials without chemical additives.",
+                specsTitle: "Product Specifications",
+                specRawMaterial: "<strong>Raw Materials:</strong> Coffee wood, mahogany, clove wood, and other hardwoods.",
+                specCarbon: "<strong>Carbon Content:</strong> Minimum 75%",
+                specMoisture: "<strong>Moisture Content:</strong> Maximum 5%",
+                specSize: "<strong>Size:</strong> Various sizes (customizable)",
+                specAsh: "<strong>Ash Content:</strong> Maximum 3%",
+                applicationsTitle: "Applications",
+                app1Title: "Household",
+                app1Desc: "Perfect for cooking needs like barbecues.",
+                app2Title: "Industrial",
+                app2Desc: "Ideal for factory combustion or other uses requiring quality charcoal.",
+                app3Title: "Export",
+                app3Desc: "Meets international quality standards for global market demand.",
+                packagingTitle: "Packaging",
+                pack1Title: "10 kg Bags",
+                pack2Title: "25 kg Sacks",
+                pack3Title: "Custom Packaging",
+                pack3Desc: "(As per customer request)",
+                contactTitle: "Contact Us",
+                contactEmail: "<strong>Email:</strong> gadisdesasae@gmail.com",
+                contactPhone: "<strong>Phone/WhatsApp:</strong> +6285854492790",
+                contactAddressLabel: "<strong>Address:</strong> ",
+                contactAddress: "[Insert company address]",
+                navAbout: "About Product",
+                navSpecs: "Specifications",
+                navContact: "Contact",
+            }
+        };
+
+        const langIdButton = document.getElementById('lang-id');
+        const langEnButton = document.getElementById('lang-en');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            // Hero
+            document.getElementById('hero-title').textContent = content[lang].heroTitle;
+            document.getElementById('hero-subtitle').textContent = content[lang].heroSubtitle;
+            document.querySelector('.hero-bg a').textContent = content[lang].heroButton;
+            
+            // Nav
+            document.querySelector('nav a[href="#about"]').textContent = content[lang].navAbout;
+            document.querySelector('nav a[href="#specifications"]').textContent = content[lang].navSpecs;
+            document.querySelector('nav a[href="#contact"]').textContent = content[lang].navContact;
+            // Mobile Nav
+            document.querySelector('#mobile-menu a[href="#about"]').textContent = content[lang].navAbout;
+            document.querySelector('#mobile-menu a[href="#specifications"]').textContent = content[lang].navSpecs;
+            document.querySelector('#mobile-menu a[href="#contact"]').textContent = content[lang].navContact;
+
+
+            // About
+            document.getElementById('about-title').textContent = content[lang].aboutTitle;
+            document.getElementById('about-content').textContent = content[lang].aboutContent;
+            document.getElementById('advantage-1-title').textContent = content[lang].advantage1Title;
+            document.getElementById('advantage-1-desc').textContent = content[lang].advantage1Desc;
+            document.getElementById('advantage-2-title').textContent = content[lang].advantage2Title;
+            document.getElementById('advantage-2-desc').textContent = content[lang].advantage2Desc;
+            document.getElementById('advantage-3-title').textContent = content[lang].advantage3Title;
+            document.getElementById('advantage-3-desc').textContent = content[lang].advantage3Desc;
+
+            // Specifications
+            document.getElementById('specs-title').textContent = content[lang].specsTitle;
+            document.getElementById('spec-raw-material').innerHTML = content[lang].specRawMaterial;
+            document.getElementById('spec-carbon').innerHTML = content[lang].specCarbon;
+            document.getElementById('spec-moisture').innerHTML = content[lang].specMoisture;
+            document.getElementById('spec-size').innerHTML = content[lang].specSize;
+            document.getElementById('spec-ash').innerHTML = content[lang].specAsh;
+
+            // Applications
+            document.getElementById('applications-title').textContent = content[lang].applicationsTitle;
+            document.getElementById('app-1-title').textContent = content[lang].app1Title;
+            document.getElementById('app-1-desc').textContent = content[lang].app1Desc;
+            document.getElementById('app-2-title').textContent = content[lang].app2Title;
+            document.getElementById('app-2-desc').textContent = content[lang].app2Desc;
+            document.getElementById('app-3-title').textContent = content[lang].app3Title;
+            document.getElementById('app-3-desc').textContent = content[lang].app3Desc;
+
+            // Packaging
+            document.getElementById('packaging-title').textContent = content[lang].packagingTitle;
+            document.getElementById('pack-1-title').textContent = content[lang].pack1Title;
+            document.getElementById('pack-2-title').textContent = content[lang].pack2Title;
+            document.getElementById('pack-3-title').textContent = content[lang].pack3Title;
+            document.getElementById('pack-3-desc').textContent = content[lang].pack3Desc;
+
+            // Contact
+            document.getElementById('contact-title').textContent = content[lang].contactTitle;
+            document.getElementById('contact-email').innerHTML = content[lang].contactEmail;
+            document.getElementById('contact-phone').innerHTML = content[lang].contactPhone;
+            document.getElementById('contact-address-label').innerHTML = content[lang].contactAddressLabel;
+            document.getElementById('contact-address').textContent = content[lang].contactAddress;
+
+
+            if (lang === 'id') {
+                langIdButton.classList.add('active');
+                langEnButton.classList.remove('active');
+                 document.querySelector('#contact a[href^="https://wa.me"]').textContent = "Hubungi via WhatsApp";
+            } else {
+                langEnButton.classList.add('active');
+                langIdButton.classList.remove('active');
+                document.querySelector('#contact a[href^="https://wa.me"]').textContent = "Contact via WhatsApp";
+            }
+        }
+
+        langIdButton.addEventListener('click', () => setLanguage('id'));
+        langEnButton.addEventListener('click', () => setLanguage('en'));
+
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set initial language based on browser or default to 'id'
+        const userLang = navigator.language.startsWith('en') ? 'en' : 'id';
+        setLanguage(userLang);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Jika menu mobile terbuka, tutup dulu
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
